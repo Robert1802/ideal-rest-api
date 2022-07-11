@@ -20,13 +20,4 @@ func InvestorRoute(app *fiber.App) {
 	// Delete Investor
 	app.Delete("/investor/:cpf", controllers.DeleteAInvestor)
 
-	// Asset
-	// Add Asset to Investor List
-	app.Post("/investor/asset/:cpf", controllers.InsertAssetOnInvestor)
-	// Order Assets
-	app.Post("/investor/asset/order/:type/:asc/:cpf", controllers.SortAssets)
-
-	// Get Asset By Symbol
-	app.Post("/investor/assets", controllers.GetAssetPrice)
-
 }
