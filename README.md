@@ -38,23 +38,30 @@ Os valores apresentados dos ativos estão em dolar.
 
 Criar perfil de Investidor:
 - POST: http://localhost:6000/investor
+
 Traz a informação de um Investidor por CPF:
 - GET: http://localhost:6000/investor/:cpf
+
 Traz as informações de todos os Investidores:
 - GET: http://localhost:6000/investors
+
 Edita as informações de um Investidor por CPF:
 - PUT: http://localhost:6000/investor/:cpf
+
 Deleta as informações de um investidor por CPF:
-- Delete: http://localhost:6000/investor/:cpf
+- DELETE: http://localhost:6000/investor/:cpf
 
 **Assets:**
 
 Traz o preço de um ou mais ativos com o valor em Dolar:
 - POST: http://localhost:6000/
+
 Adiciona um Asset à lista de Assets de um Investidor:
 - POST: http://localhost:6000/asset/asset/:cpf
+
 Remove um Asset à lista de Assets de um Investidor:
 - POST: http://localhost:6000/asset/:cpf/remove
+
 Ordena os Assets da lista de um Investidor por criteriod e Nome, Preço ou Lista 
 - POST: http://localhost:6000/asset/order/:type/:asc/:cpf
     - type = "name" | "type" | "list"
