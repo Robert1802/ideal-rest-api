@@ -29,10 +29,4 @@ func InvestorRoute(app *fiber.App) {
 	// Get Asset By Symbol
 	app.Post("/investor/assets", controllers.GetAssetPrice)
 
-	// interfaciar
-	// testes
-	// swagger
-	// documentação do db
-	// git
-	// dar acesso aos 2 caras da ideal
 }
