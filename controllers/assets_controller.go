@@ -12,8 +12,6 @@ import (
 	"go.mongodb.org/mongo-driver/bson"
 )
 
-// var investorCollection *mongo.Collection = configs.GetCollection(configs.DB, "investors")
-
 func InsertAssetOnInvestor(c *fiber.Ctx) error {
 	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
 	cpf := c.Params("cpf")
@@ -85,7 +83,6 @@ func RemoveAssetOfInvestor(c *fiber.Ctx) error {
 
 	var symbol interface{}
 
-	// Loop only adds new assets and get their current prices
 	iter := quote.List(assets.Symbol)
 	for iter.Next() {
 		symbol = nil
