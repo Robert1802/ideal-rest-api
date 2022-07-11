@@ -31,7 +31,7 @@ Os valores apresentados dos ativos estão em dolar.
     4. Os ativos podem ser adicionados ou deletados individualmente ou em blocos
     5. A ordem dos ativos também pode ser alterada por tipo e ordem
         - Tipos: Nome, Preço e Lista
-        - Ordem Crescente = 1 e Decrescente = 0
+        - Ordem Crescente = 0 e Decrescente = 1
 
 # Rotas
 **Invetidor:**
