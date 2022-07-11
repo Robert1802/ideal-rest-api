@@ -17,9 +17,9 @@ Este projeto consiste em uma API criada para a resolução de um case para o pro
 
 # Banco de dados
 Neste projeto foi utilizado o banco de dados MongoDB. A motivação para utilizar este banco foi devido à sua facilidade de utilização, livre de custos para a sua utilização e formato das informações a serem persistidas.
-    - Usuario: usuario
-	- Senha: senha123
-    - conexão: MONGOURI=mongodb+srv://usuario:senha123@cluster0.po0gmgr.mongodb.net/?retryWrites=true&w=majority
+- Usuario: usuario
+- Senha: senha123
+- conexão: MONGOURI=mongodb+srv://usuario:senha123@cluster0.po0gmgr.mongodb.net/?retryWrites=true&w=majority
  
 # Funcionamento
 Esta API tem a função de cadastrar valores de ativos associados à um CPF e buscar o valor atualizado destes ativos na Yahoo Finance.
