@@ -1,0 +1,294 @@
+{
+	"info": {
+		"_postman_id": "271b4164-0908-4209-9246-48bf1680a72e",
+		"name": "ideal-rest-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Assets",
+			"item": [
+				{
+					"name": "Trazer Preços de Lista de Assets",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":[\"AAPL\", \"GOOG\", \"MSFT\", \"AMZN\", \"ITUB\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/assets",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"assets"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adiciona Assets à um CPF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":[\"AAPL\", \"GOOG\", \"MSFT\", \"AMZN\", \"TSLA\", \"BTC\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/asset/39159586893",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"asset",
+								"39159586893"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Adiciona Assets à lista de um CPF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":[\"AAPL\", \"ITUB\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/asset/39159586893/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"asset",
+								"39159586893",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Remove Assets da lista de um CPF",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":[\"BTC\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/asset/39159586893/remove",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"asset",
+								"39159586893",
+								"remove"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ordena Assets de um Investor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"symbol\":[\"AAPL\", \"BTC\", \"TSLA\", \"AMZN\", \"GOOG\"]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/investor/asset/order/name/0/39159586893",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"investor",
+								"asset",
+								"order",
+								"name",
+								"0",
+								"39159586893"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Investor",
+			"item": [
+				{
+					"name": "Cadastrar Investidor",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"39159586893\",\r\n    \"name\":\"Roberto Lima de Moura\",\r\n    \"email\":\"roblm_@hotmail.com\",\r\n    \"assets\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/investor",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"investor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Editar Nome e Email",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"cpf\": \"39159586893\",\r\n    \"name\":\"Roberto Lima de Mouraaaa\",\r\n    \"email\":\"roblm_@hotmail.com\",\r\n    \"assets\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/investor/39159586893",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"investor",
+								"39159586893"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trazer Investor e Assets por CPF",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/investor/39159586893",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"investor",
+								"39159586893"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Trazer informações de todos os Investors",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6000/investors",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"investors"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Deletar Investor por CPF",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6000/investor/39159586898",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6000",
+							"path": [
+								"investor",
+								"39159586898"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
